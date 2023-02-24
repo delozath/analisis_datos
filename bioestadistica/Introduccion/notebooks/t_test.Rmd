@@ -1,7 +1,3 @@
----
----
----
-
 # T-Test
 
 ```{r}
@@ -10,10 +6,15 @@ library("dplyr")
 
 
 ```{r}
-datos <- read.csv("/store/science/data/cursos/bioestadistica/src/introduccion/db_sim_g_ng_c.csv")
+datos <- read.csv("/store/science/data/cursos/bioestadistica/src/introduccion/db2_sim_g_ng_c.csv")
 datos
 
 ```
+
+```{r}
+shapiro.test(datos$oxo)
+```
+
 
 ### Filtrar
 
@@ -30,13 +31,13 @@ shapiro.test(sexo_m$oxo)
 
 ### Prueba T
 ```{r}
-t.test(sexo_f$oxo, sexo_m$oxo)
+t.test(sexo_f$oxo, sexo_m$oxo, paired = FALSE, altertative = "equal")
 ```
 
 
 ```{r}
 datos$sexo <- factor(datos$sexo)
-t.test(oxo ~ sexo, data = datos, paired = FALSE, altertative = "equal")
+t.test(il_6 ~ sexo, data = datos, paired = FALSE, altertative = "equal")
 ```
 
 

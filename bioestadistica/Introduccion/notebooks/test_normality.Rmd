@@ -10,7 +10,7 @@ library("dplyr")
 
 
 ```{r}
-datos <- read.csv("/store/science/data/cursos/bioestadistica/src/introduccion/db_sim_g_ng_nc.csv")
+datos <- read.csv("/store/science/data/cursos/bioestadistica/src/introduccion/db2_sim_g_ng_nc.csv")
 datos
 
 ```
